@@ -1,0 +1,48 @@
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 7%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: var(--cg-black);
+    color: var(--cg-white);
+    padding: 0;
+}
+  
+.navlist {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.navlink {
+    color: var(--cg-white);
+    font-weight: bold;
+    margin: 0 12px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: monospace;
+}
+  
+.navlink:hover {
+    color: var(--cg-blue);
+    text-decoration: underline;
+}
+  
+.logo {
+    font-family: Georgia;
+    font-size: 24px;
+}
+
+.aboutimage img {
+  max-width: 300px;
+  border-radius: 3px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}

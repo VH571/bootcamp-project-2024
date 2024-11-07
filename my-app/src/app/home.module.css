@@ -1,0 +1,33 @@
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  }
+  
+  
+.aboutimage img {
+    max-width: 300px;
+    border-radius: 3px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  }
+  
+.abouttext {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+.abouttext h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+.abouttext p {
+    font-size: 16px;
+    line-height: 1.5;
+}
