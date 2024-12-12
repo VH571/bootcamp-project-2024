@@ -25,7 +25,7 @@ const blogs: Blog[] = [
         image: "/images/pic-htmltree.gif", 
         imageAlt: "theDOM",
         slug: "finished-milestone-1",
-                content: "TypeScript is JavaScript but more awesome! Here's a detailed explanation of my experience...",
+        content: "TypeScript is JavaScript but more awesome! Here's a detailed explanation of my experience...",
     },
 ];
 

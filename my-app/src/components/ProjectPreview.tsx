@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './ProjectPreview.module.css';
-import type { Project } from '@/app/projectData';
+import type ProjectObject from '@/database/projectSchema'; 
 
-export default function ProjectPreview({ name, description, image, imageAlt, link }: Project) {
+export default function ProjectPreview({ name, description, image, imageAlt, link }: ProjectObject) {
   return (
     <div className="project">
       <Image 
