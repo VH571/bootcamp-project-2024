@@ -22,8 +22,9 @@ export default async function Portfolio() {
     <main>
       <h1 className="page-title">Portfolio</h1>
       <div className="project">
-        {projectList.map(project => 
-        <ProjectPreview 
+        {projectList.map((project, idx) => 
+        <ProjectPreview
+        key={idx} 
         name={project.name}
         description={project.description}
         image={project.image}
