@@ -9,9 +9,22 @@ type Blog = {
   imageAlt: string; // alt for image
   slug: string;
   content: string; // text content for individual blog page
+  comments : IComment[]
 };
 
+export type IComment = {
+  user: string;
+  comment: string;
+  time: Date;
+}
+
 // mongoose schema
+const commentSchema = new Schema<IComment>({
+  user: { type: String, required: true },
+  comment: { type: String, required: true },
+  time: { type: Date, default: Date.now }
+});
+
 const blogSchema = new Schema<Blog>({
   title: { type: String, required: true },
   slug: { type: String, required: true },
@@ -20,7 +33,9 @@ const blogSchema = new Schema<Blog>({
   image: { type: String, required: true },
   imageAlt: { type: String, required: true },
   content: { type: String, required: true },
+  comments: [commentSchema]
 });
+
 
 // defining the collection and model
 const Blog = mongoose.models["blogs"] || mongoose.model("blogs", blogSchema);

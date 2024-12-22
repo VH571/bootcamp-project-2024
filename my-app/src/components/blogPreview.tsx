@@ -4,9 +4,9 @@ import Link from 'next/link';
 import styles from './blogPreview.module.css';
 import type BlogObject from '@/database/blogSchema'; 
 
-export default function BlogPreview({ title, date, description, image, imageAlt, slug }: BlogObject) {
+export default function BlogPreview({ title, date, description, image, imageAlt, slug , comments}: BlogObject) {
   return (
-    <Link href={`/blogs/${slug}`} className='blog-container'>
+    <Link href={`/blog/${slug}`} className='blog-container'>
     <div className="blog-post">
       <h3>{title}</h3>
       <div>

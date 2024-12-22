@@ -26,6 +26,7 @@ export default async function Blog() {
             <h2 className={style.pageTitle}>My Blog Posts</h2>
             {blogList.map(blog => 
                 <BlogPreview 
+                key = {blog.title}
                 title={blog.title}
                 slug={blog.slug}
                 date={blog.date}
@@ -33,6 +34,7 @@ export default async function Blog() {
                 content={blog.content}
                 image={blog.image}
                 imageAlt={blog.imageAlt}
+                comments = {blog.comments}
                 />
                )}
         </div>

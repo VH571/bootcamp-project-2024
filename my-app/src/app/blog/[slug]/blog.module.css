@@ -1,0 +1,39 @@
+.blogContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.blog{
+    margin: 10px;
+    padding: 10px;
+    
+    border-radius: 10px;
+    background-color: var(--cg-white);
+    border-style: solid;
+    border-width: 2px;
+    
+}
+.blogTitle{
+    
+}
+
+.blogSection{
+
+
+}
+
+
+
+.blogComments{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.blogCommentsTitle{
+    position: static;
+    
+}

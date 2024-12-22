@@ -1,0 +1,44 @@
+.CommentContainer{
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    
+    padding: 5px;
+    width: 35%;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+    border: solid;
+    border-color: var(--cg-black);
+    border-radius: 5px;
+    border-width: 2px;
+
+    margin-bottom: 10px;
+}
+
+.CommentInfo{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    margin-left:15px;
+    margin-bottom: 5px ;
+}
+.CommentUser{
+    margin : 0px;
+    margin-right: 10px;
+    font-weight: bold;
+} 
+.CommentDate{
+    opacity: 40%;
+
+}
+.Comment{
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+
