@@ -12,7 +12,9 @@ async function getBlogs(){
 			// send a response as the blogs as the message
 	    return blogs
 	} catch (err) {
-	    return []
+      console.log(`error: ${err}`);
+      return []; // needs to return nothing
+	    
 	}
 }
 

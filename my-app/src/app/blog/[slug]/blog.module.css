@@ -1,16 +1,20 @@
 .blogContainer{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+    background-color: var(--cg-white);    
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: auto;
 }
 .blog{
     margin: 10px;
     padding: 10px;
     
     border-radius: 10px;
-    background-color: var(--cg-white);
+    background-color: var(--cg-grey);
     border-style: solid;
     border-width: 2px;
     
