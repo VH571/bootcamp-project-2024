@@ -1,7 +1,9 @@
-import {NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import blogSchema from "@/database/blogSchema"
 import style from "./blog.module.css";
-import Comment from "@/components/comment"
+import Comment from "@/components/comment";
+import CommentForm from "@/components/commentForm";
+
 type Props = {
     params: { slug: string }
 }
@@ -22,7 +24,7 @@ export default async function Blog({ params }: Props) {
         } catch (err: unknown) {
             console.log(`error: ${err}`);
             return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
-            
+
         }
     }
 
@@ -43,15 +45,17 @@ export default async function Blog({ params }: Props) {
                 <h1 className={style.blogTitle} >
                     {blog?.title}
                 </h1>
-                <div className={style.blogSection}>
-                    <p>{blog?.content}</p>
-                </div>
+                <p className={style.blogSection} >
+                    {blog?.content}
+                    </p>
             </div>
 
             <h2 className={style.blogCommentsTitle}>
                 Comments
             </h2>
+            
             <div className={style.blogComments}>
+                <CommentForm slug={slug} />
                 {blog.comments.map((comment, index) => (
                     <Comment key={index} comment={comment} />
                 ))}

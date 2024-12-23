@@ -10,7 +10,7 @@ type IParams = {
 
 export async function POST(req: NextRequest, { params }: IParams) {
   await connectDB();
-  const { slug } = params;
+  const { slug } = await params;
   try {
     const { user, comment } = await req.json();
 
