@@ -1,4 +1,4 @@
-import connectDB from "@/database/db"
+import {NextResponse } from "next/server";
 import blogSchema from "@/database/blogSchema"
 import style from "./blog.module.css";
 import Comment from "@/components/comment"
@@ -21,7 +21,8 @@ export default async function Blog({ params }: Props) {
             return res.json();
         } catch (err: unknown) {
             console.log(`error: ${err}`);
-            return null;
+            return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+            
         }
     }
 
