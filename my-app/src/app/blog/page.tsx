@@ -1,5 +1,4 @@
 import style from "./blog.module.css";
-import Link from "next/link";
 import BlogPreview from '@/components/blogPreview';
 import connectDB from "@/database/db";
 import BlogObject from "@/database/blogSchema"

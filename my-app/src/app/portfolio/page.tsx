@@ -1,4 +1,3 @@
-import styles from './portfolio.module.css';
 import ProjectPreview from '@/components/ProjectPreview';
 import connectDB from "@/database/db";
 import ProjectObject from "@/database/projectSchema"

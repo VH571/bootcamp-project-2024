@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './blogPreview.module.css';
 import type BlogObject from '@/database/blogSchema'; 
 
 export default function BlogPreview({ title, date, description, image, imageAlt, slug , comments}: BlogObject) {

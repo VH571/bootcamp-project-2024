@@ -1,8 +1,4 @@
 import style from "./home.module.css";
-import Image from 'next/image';
-import blogs from '@/database/blogData';
-import BlogPreview from '@/components/blogPreview';
-
 // You can name the function within page.tsx anything you want.
 export default function Home() {
   return (
