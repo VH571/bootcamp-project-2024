@@ -3,17 +3,16 @@ import connectDB from "@/database/db";
 import Blog from "@/database/blogSchema";
 
 type IParams = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export async function POST(req: NextRequest, { params }: IParams) {
+export async function POST(req: NextRequest, context: IParams) {
   await connectDB();
-  const { slug } = await params;
+  const { slug } = await context.params;
   try {
     const { user, comment } = await req.json();
-
     if (!user || !comment) {
       return NextResponse.json(
         { error: "Enter a user and comment" },
