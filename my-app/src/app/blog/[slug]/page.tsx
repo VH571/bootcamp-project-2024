@@ -5,12 +5,14 @@ import Comment from "@/components/comment";
 import CommentForm from "@/components/commentForm";
 
 type Props = {
-    params: { slug: string }
+    params: Promise<{
+        slug: string;
+      }>;
 }
 
 
-export default async function Blog({ params }: Props) {
-    const { slug } = await params;
+export default async function Blog(context: Props) {
+    const { slug } = await context.params;
     async function getBlog(slug: string) {
         try {
             const res = await fetch(`http://localhost:3000/api/Blogs/${slug}`, {
