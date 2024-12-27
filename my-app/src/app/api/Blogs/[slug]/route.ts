@@ -3,10 +3,11 @@ import connectDB from "@/database/db";
 import blogSchema from "@/database/blogSchema";
 
 type IParams = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
+
 
 // If { params } looks confusing, check the note below this code block
 export async function GET(req: NextRequest, { params }: IParams) {
